@@ -1,0 +1,5 @@
+#!/bin/bash
+for i in `find . -name \*.md -type f -not -path '*/[\._]*'`; do
+   pandoc "${i}" --mathjax --smart --toc -t html5 --template github.html -o "${i%.md}.html"
+   echo "pandoc "${i}" --mathjax --smart --toc -t html5 --template github.html -o "${i%.md}.html""
+done
