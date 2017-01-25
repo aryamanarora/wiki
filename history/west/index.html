@@ -19,7 +19,7 @@
               -webkit-text-size-adjust: 100%;
               line-height: 1.5;
               color: #333;
-              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+              font-family: Latin Modern Roman, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
               font-size: 16px;
               line-height: 1.5;
               word-wrap: break-word;
@@ -460,17 +460,37 @@
             .markdown-body h1 {
               padding-bottom: 0.3em;
               font-size: 2em;
-              border-bottom: 1px solid #eee;
+              counter-reset: h2counter;
             }
 
             .markdown-body h2 {
               padding-bottom: 0.3em;
               font-size: 1.5em;
-              border-bottom: 1px solid #eee;
+            }
+
+            .markdown-body h2:before {
+              content: counter(h2counter) ".\0000a0\0000a0";
+              counter-increment: h2counter;
+              counter-reset: h3counter;
+            }
+
+            .markdown-body h2.nocount:before {
+                content: none;
+                counter-increment: none;
             }
 
             .markdown-body h3 {
               font-size: 1.25em;
+            }
+
+            .markdown-body h3:before {
+                content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+                counter-increment: h3counter;
+            }
+
+            .markdown-body h3.nocount:before {
+                content: none;
+                counter-increment: none;
             }
 
             .markdown-body h4 {
@@ -698,13 +718,14 @@
              max-width: 980px;
              margin: 0 auto;
              padding: 45px;
+             counter-reset: h2counter;
          }
         </style>
     </head>
     <article class="markdown-body">
-                                <div id="TOC">
+                                <div id="TOC" style="float: right">
             <tbody>
-                <h3>Table of Contents</h3>
+                <h3 class="nocount">Table of Contents</h3>
                 <ul>
                 <li><a href="#western-history">Western History</a><ul>
                 <li><a href="#paradigm-shifts">Paradigm Shifts</a></li>

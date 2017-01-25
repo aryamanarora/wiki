@@ -4,8 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="Content-Style-Type" content="text/css" />
         <meta name="generator" content="pandoc" />
-                <meta name="author" content="Aryaman Arora" />
-                                <title>Wiki</title>
+                                <title></title>
         <style type="text/css">code{white-space: pre;}</style>
                                                 <style type="text/css">
             @font-face {
@@ -18,7 +17,7 @@
               -webkit-text-size-adjust: 100%;
               line-height: 1.5;
               color: #333;
-              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+              font-family: Latin Modern Roman, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
               font-size: 16px;
               line-height: 1.5;
               word-wrap: break-word;
@@ -459,17 +458,37 @@
             .markdown-body h1 {
               padding-bottom: 0.3em;
               font-size: 2em;
-              border-bottom: 1px solid #eee;
+              counter-reset: h2counter;
             }
 
             .markdown-body h2 {
               padding-bottom: 0.3em;
               font-size: 1.5em;
-              border-bottom: 1px solid #eee;
+            }
+
+            .markdown-body h2:before {
+              content: counter(h2counter) ".\0000a0\0000a0";
+              counter-increment: h2counter;
+              counter-reset: h3counter;
+            }
+
+            .markdown-body h2.nocount:before {
+                content: none;
+                counter-increment: none;
             }
 
             .markdown-body h3 {
               font-size: 1.25em;
+            }
+
+            .markdown-body h3:before {
+                content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+                counter-increment: h3counter;
+            }
+
+            .markdown-body h3.nocount:before {
+                content: none;
+                counter-increment: none;
             }
 
             .markdown-body h4 {
@@ -697,14 +716,43 @@
              max-width: 980px;
              margin: 0 auto;
              padding: 45px;
+             counter-reset: h2counter;
          }
         </style>
     </head>
     <article class="markdown-body">
-                        <div id="header" class="TOC">
-            <h1 class="title">Wiki</h1>
-                                    <h2 class="author">Aryaman Arora</h2>
-                                </div>
-                        <p>Inspired by <a href="https://wiki.soimort.org/" class="uri">https://wiki.soimort.org/</a>.</p>
+                                <div id="TOC" style="float: right">
+            <tbody>
+                <h3 class="nocount">Table of Contents</h3>
+                <ul>
+                <li><a href="#mathematics">Mathematics</a><ul>
+                <li><a href="#fundamentals">Fundamentals</a></li>
+                <li><a href="#algebra">Algebra</a></li>
+                <li><a href="#calculus">Calculus</a></li>
+                </ul></li>
+                <li><a href="#sciences">Sciences</a><ul>
+                <li><a href="#physics">Physics</a></li>
+                <li><a href="#biology">Biology</a></li>
+                </ul></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#english">English</a></li>
+                </ul>
+            </tbody>
+        </div>
+                <center>
+<h1>
+<b>Aryaman’s Wiki</b>
+</h1>
+</center>
+<p><em>Inspired by <a href="https://wiki.soimort.org/" class="uri">https://wiki.soimort.org/</a>.</em></p>
+<h2 id="mathematics">Mathematics</h2>
+<h3 id="fundamentals">Fundamentals</h3>
+<h3 id="algebra">Algebra</h3>
+<h3 id="calculus">Calculus</h3>
+<h2 id="sciences">Sciences</h2>
+<h3 id="physics">Physics</h3>
+<h3 id="biology">Biology</h3>
+<h2 id="history">History</h2>
+<h2 id="english">English</h2>
             </article>
 </html>
