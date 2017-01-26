@@ -2,5 +2,5 @@
 rm -r *.html
 for i in `find . -name \*.md -type f -not -path '*/[\._]*'`; do
     pandoc "${i}" --mathjax --smart --toc -t html5 --template academia.html -o "${i%.md}.html"
-    echo "pandoc "${i}" --mathjax --smart --toc -t html5 --template academia.html -o "${i%.md}.html""
+    echo ${i}" --> "${i%.md}.html""
 done

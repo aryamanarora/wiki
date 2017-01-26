@@ -1,9 +1,6 @@
 ---
-author: Aryaman Arora
-date: January 24, 2017
+title: Western History
 ---
-
-# Western History
 
 ## Paradigm Shifts
 - centralization
