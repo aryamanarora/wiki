@@ -66,6 +66,27 @@ title: Aryaman's Compendium
 
 ### Ecology
 
+## Computer Science and Engineering
+- Hardware
+- Operating Systems
+- [**Algorithms**](cs/algo)
+    - Searching
+    - Sorting
+    - Running Time and Resource Consumption
+- Language
+    - Paradigms
+        - Functional Programming
+        - Object-oriented Programming
+        - Concurrency
+    - Compilers
+    - Interpreters
+- Databases
+    - SQL
+- Web
+    - TCP/IP
+    - Sockets
+    - Javascript and Frameworks
+
 ## History
 - [**Western Civilization**](history/west)
     - Europe
