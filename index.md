@@ -27,24 +27,26 @@ title: Aryaman's Compendium
         - Quadratics
         - Quadratic Formula
     - Irrational Numbers
-- [**Linear Algebra**](math/linear)
+- [**Linear Algebra**](math/algebra/linear)
 
 ### Shape
-- [**Geometry**](math/geometry)
+- [**Geometry**](math/shape/geometry)
     - Lines
     - Planes
     - Polygons
     - Triangles
-        - [**Trigonometry**](math/trig)
+        - [**Trigonometry**](math/shape/trig)
         
 ### Change
 - [**Calculus**](math/calc)
 
 ### Applied Mathematics
-- [*Applied Mathematics*](math/applied)
-    - [**Statistics and Probability**](math/applied/stat)
-        - Probability
-        - Statistics
+- [**Statistics and Probability**](math/applied/stat)
+    - Probability
+    - Statistics
+- [**Cryptography**](math/applied/crypto)
+    - Encryption
+    - Quantum Cryptography
 
 ## Sciences
 
